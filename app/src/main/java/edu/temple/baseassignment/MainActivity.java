@@ -28,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.activity_main);
             Log.d(TAG, "Layout set successfully");
 
-            // Initialize views
+            // **********
+            // Init Views
+            // **********
+            
             nameEditText = findViewById(R.id.nameEditText);
             emailEditText = findViewById(R.id.emailEditText);
             programSpinner = findViewById(R.id.programSpinner);
@@ -39,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
             Log.d(TAG, "Views initialized");
 
-            // Set up the Spinner
+            // Set up Spinner
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                     R.array.program_options, android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -66,31 +69,31 @@ public class MainActivity extends AppCompatActivity {
     private boolean validateInput() {
         boolean isValid = true;
 
-        // Validate name
+        // **********
+        // Validation
+        // **********
+
         if (nameEditText.getText().toString().trim().isEmpty()) {
             nameEditText.setError("Name is required");
             isValid = false;
         }
 
-        // Validate email
         if (emailEditText.getText().toString().trim().isEmpty()) {
             emailEditText.setError("Email is required");
             isValid = false;
         }
 
-        // Validate program selection
+        // program selection
         if (programSpinner.getSelectedItemPosition() == 0) {
             ((TextView)programSpinner.getSelectedView()).setError("Please select a program");
             isValid = false;
         }
 
-        // Validate password
         if (passwordEditText.getText().toString().trim().isEmpty()) {
             passwordEditText.setError("Password is required");
             isValid = false;
         }
 
-        // Validate password confirmation
         if (confirmPasswordEditText.getText().toString().trim().isEmpty()) {
             confirmPasswordEditText.setError("Password confirmation is required");
             isValid = false;
