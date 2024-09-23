@@ -17,4 +17,3 @@ dependencyResolutionManagement {
 rootProject.name = "cis3515-assignment-2"
 include(":app")
 
-enableFeaturePreview("VERSION_CATALOGS")

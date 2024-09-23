@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">SignUpForm</string>
-    <string-array name="programs_array">
+    <string-array name="program_options">
         <item>Please select your program</item>
         <item>Information Science</item>
         <item>Computer Science</item>
