@@ -1,5 +1,7 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.application") version "8.1.2"
+    kotlin("android")
+    kotlin("kapt")
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
